@@ -1,5 +1,6 @@
 from storage import load_data, save_data
 from add_book import add_book
+from find import find_book
 
 while True:
     try:
@@ -12,6 +13,9 @@ while True:
         
         if choice == 1:
             add_book()
+            
+        if choice == 2:
+            find_book()
         
         if choice == 5:
             break
