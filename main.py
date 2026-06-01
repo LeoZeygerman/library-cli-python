@@ -1,6 +1,7 @@
 from storage import load_data, save_data
 from add_book import add_book
 from find import find_book, find_author
+from delete import delete_book
 
 while True:
     try:
@@ -16,6 +17,9 @@ while True:
             
         if choice == 2:
             find_book()
+            
+        if choice == 3:
+            delete_book()
             
         if choice == 4:
             find_author()
