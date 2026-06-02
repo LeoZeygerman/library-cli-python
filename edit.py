@@ -16,6 +16,13 @@ def edit():
                 item['name'] = new_name
                 save_data(data)
                 print('Название успешно изменено.')
+                
+            if choice == 2:
+                new_author = input('Введите новое имя автора: ')
+                item['author'] = new_author
+                save_data(data)
+                print('Имя автора успешно изменено.')
+            
     if not found:
         print('Книга не найдена.')
             
