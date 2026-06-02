@@ -8,7 +8,7 @@ def edit():
     for item in data:
         if item['name'] == name:
             found = True
-            print('Что хотите редактировать? \n 1.Название \n 2.Автора \n 3.Описание')
+            print('Что хотите редактировать? \n 1.Название \n 2.Автора \n 3.Описание \n 4.Вернуться')
             choice = int(input('Ваш выбор: '))
             
             if choice == 1:
@@ -22,6 +22,15 @@ def edit():
                 item['author'] = new_author
                 save_data(data)
                 print('Имя автора успешно изменено.')
+                
+            if choice == 3:
+                new_description = input('Введите новое описание книги: ')
+                item['description'] = new_description
+                save_data(data)
+                print('Описание успешно изменено.')
+                
+            if choice == 4:
+                return
             
     if not found:
         print('Книга не найдена.')
