@@ -2,6 +2,7 @@ from storage import load_data, save_data
 from add_book import add_book
 from find import find_book, find_author
 from delete import delete_book
+from edit import edit
 
 while True:
     try:
@@ -9,7 +10,8 @@ while True:
         print('2.Найти книгу')
         print('3.Удалить книгу')
         print('4.Поиск книг автора')
-        print('5.Выйти')
+        print('5.Редактировать книгу')
+        print('6.Выйти')
         choice = int(input('Ваш выбор: '))
         
         if choice == 1:
@@ -23,8 +25,11 @@ while True:
             
         if choice == 4:
             find_author()
-        
+            
         if choice == 5:
+            edit()
+        
+        if choice == 6:
             break
         
     except ValueError:
